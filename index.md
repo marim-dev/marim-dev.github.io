@@ -8,6 +8,7 @@ service dvdrental
 
 version v1
 ```
+---
 
 **Specify** its API
 ```
@@ -20,6 +21,7 @@ path "/category"
 path "/category/" categoryId
 	path parameter categoryId	
 ```
+---
 
 **Implement** it
 ```
@@ -35,6 +37,7 @@ path "/category/" categoryId
 
 	query "select category_id as id, name from category where category_id = cast(" categoryId " as integer)"
 ```
+---
 
 **Define** its datasource
 ```
@@ -44,11 +47,13 @@ datasource dvdrental
 	user "postgres"
 	password "postgres"
 ```
+---
 
 **Run** it
 ```
-docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime:0.0.1-SNAPSHOT
+docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime
 ```
+---
 
 **Be Happy!!! :)** 
 
