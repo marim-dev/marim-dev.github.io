@@ -8,7 +8,6 @@ service dvdrental
 
 version v1
 ```
----
 
 **Specify** its API
 ```
@@ -21,9 +20,8 @@ path "/category"
 path "/category/" categoryId
 	path parameter categoryId	
 ```
----
 
-**Implement** its API
+**Implement** it
 ```
 implementation service dvdrental version v1
 
@@ -37,7 +35,6 @@ path "/category/" categoryId
 
 	query "select category_id as id, name from category where category_id = cast(" categoryId " as integer)"
 ```
----
 
 **Define** its datasource
 ```
@@ -47,3 +44,14 @@ datasource dvdrental
 	user "postgres"
 	password "postgres"
 ```
+
+**Run** it
+```
+docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime:0.0.1-SNAPSHOT
+```
+
+**Be Happy!!! :)** 
+
+1. Your service is ready at `http://localhost:8080/dvdrental/v1/rest`
+2. Its [Open API](https://www.openapis.org/) specification is at `http://localhost:8080/dvdrental/v1/openapi`
+3. You can view it in a human-friendly way through the integrated [Swagger UI](https://swagger.io/tools/swagger-ui/) application at `http://localhost:8080/dvdrental/v1/swagger-ui`
