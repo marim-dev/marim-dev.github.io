@@ -8,8 +8,8 @@
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if page.url == '/' or page.url == '/index.html' %} active {% endif %}">
-                    <a class="nav-link" href="/">
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '' or page.url == '/' or page.url == '/index.html' %} active {% endif %}" href="/">
                         Home
                         
                         {% if page.url == '/' or page.url == '/index.html' %}
@@ -18,8 +18,8 @@
                     </a>
                 </li>
     
-                <li class="nav-item {% if page.url == '/tutorial.html' %} active {% endif %}">
-                    <a class="nav-link" href="/tutorial.html">
+                <li class="nav-item">
+                    <a class="nav-link {% if page.url == '/tutorial.html' %} active {% endif %}" href="/tutorial.html">
                         Tutorial
     
                         {% if page.url == '/tutorial.html' %}
