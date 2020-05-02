@@ -55,7 +55,7 @@ docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime
 ```
 ---
 
-**Be Happy!!! :)** 
+**Be Happy!** 
 
 1. Your service is ready at `http://localhost:8080/dvdrental/v1/rest`
 2. Its [Open API](https://www.openapis.org/) specification is at `http://localhost:8080/dvdrental/v1/openapi`
