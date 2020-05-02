@@ -1,33 +1,32 @@
-<div class="container">
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/">Marim</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link {% if page.url == '' or page.url == '/' or page.url == '/index.html' %} active {% endif %}" href="/">
-                        Home
-                        
-                        {% if page.url == '/' or page.url == '/index.html' %}
-                            <span class="sr-only">(current)</span>
-                        {% endif %}
-                    </a>
-                </li>
-    
-                <li class="nav-item">
-                    <a class="nav-link {% if page.url == '/tutorial.html' %} active {% endif %}" href="/tutorial.html">
-                        Tutorial
-    
-                        {% if page.url == '/tutorial.html' %}
-                            <span class="sr-only">(current)</span>
-                        {% endif %}
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Marim</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link {% if page.url == '' or page.url == '/' or page.url == '/index.html' %} active {% endif %}"
+                    href="/">
+                    Home
+
+                    {% if page.url == '/' or page.url == '/index.html' %}
+                    <span class="sr-only">(current)</span>
+                    {% endif %}
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link {% if page.url == '/tutorial.html' %} active {% endif %}" href="/tutorial.html">
+                    Tutorial
+
+                    {% if page.url == '/tutorial.html' %}
+                    <span class="sr-only">(current)</span>
+                    {% endif %}
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
