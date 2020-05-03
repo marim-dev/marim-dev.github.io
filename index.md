@@ -4,7 +4,7 @@
 ---
 **Declare** your service
 {: .mt-5 }
-```
+```java
 service dvdrental
 
 version v1
@@ -12,7 +12,7 @@ version v1
 
 **Specify** its API
 {: .mt-5 }
-```
+```java
 api service dvdrental version v1
 
 path "/category"
@@ -25,23 +25,30 @@ path "/category/" categoryId
 
 **Implement** it
 {: .mt-5 }
-```
+```java
 implementation service dvdrental version v1
 
 path "/category"
-	datasource dvdrental
+	datasource datasource1
 
-	query "select category_id as id, name from category limit coalesce(cast(" $top " as integer), 100) offset coalesce(cast(" $first "as integer), 0)"
+	query "select category_id as id, 
+	              name 
+	         from category
+	        limit coalesce(cast(" $top " as integer), 100) 
+	       offset coalesce(cast(" $first "as integer), 0)"
 
 path "/category/" categoryId
-	datasource dvdrental
+	datasource datasource1
 
-	query "select category_id as id, name from category where category_id = cast(" categoryId " as integer)"
+	query "select category_id as id, 
+	              name 
+             from category
+            where category_id = cast(" categoryId " as integer)"
 ```
 
 **Define** its datasource
 {: .mt-5 }
-```
+```java
 datasource dvdrental
 	driver "org.postgresql.Driver"
 	url "jdbc:postgresql://localhost:5432/dvdrental"
@@ -51,7 +58,7 @@ datasource dvdrental
 
 **Run** it
 {: .mt-5 }
-```
+```shell
 docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime
 ```
 

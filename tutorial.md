@@ -26,7 +26,7 @@ mkdir ~/marim/project
 {: .mt-5 }
 **Declare** a service named `dvdrental` in the project by creating the `~/marim/project/dvdrental.declaration` file with the following content
 
-```
+```java
 service dvdrental
 
 version v1
@@ -36,7 +36,7 @@ version v1
 {: .mt-5 }
 **Specify** the API of the `v1` version of the `dvdrental` service by creating the `~/marim/project/dvdrental.api` file with the following content
 
-```
+```java
 api service dvdrental version v1
 
 path "/category"
@@ -51,25 +51,32 @@ path "/category/" categoryId
 {: .mt-5 }
 **Implement** the API of the `v1` version of the `dvdrental` service by creating the `~/marim/project/dvdrental.implementation` file with the following content
 
-```
+```java
 implementation service dvdrental version v1
 
 path "/category"
-	datasource dvdrental
+	datasource datasource1
 
-	query "select category_id as id, name from category limit coalesce(cast(" $top " as integer), 100) offset coalesce(cast(" $first "as integer), 0)"
+	query "select category_id as id, 
+	              name 
+	         from category
+	        limit coalesce(cast(" $top " as integer), 100) 
+	       offset coalesce(cast(" $first "as integer), 0)"
 
 path "/category/" categoryId
-	datasource dvdrental
+	datasource datasource1
 
-	query "select category_id as id, name from category where category_id = cast(" categoryId " as integer)"
+	query "select category_id as id, 
+	              name 
+             from category
+            where category_id = cast(" categoryId " as integer)"
 ```
 
 # Datasource definition
 {: .mt-5 }
 **Define** the datasource that the implementation of the `v1` version of the `dvdrental` service access by creating the `~/marim/project/dvdrental.datasource` file with the following content
 
-```
+```java
 datasource dvdrental
 	driver "org.postgresql.Driver"
 	url "jdbc:postgresql://localhost:5432/dvdrental"
