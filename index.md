@@ -16,11 +16,11 @@ version v1
 api service dvdrental version v1
 
 path "/category"
-	query parameter $first
-	query parameter $top
+  query parameter $first
+  query parameter $top
 
 path "/category/" categoryId
-	path parameter categoryId	
+  path parameter categoryId	
 ```
 
 **Implement** it
@@ -29,31 +29,31 @@ path "/category/" categoryId
 implementation service dvdrental version v1
 
 path "/category"
-	datasource datasource1
+  datasource datasource1
 
-	query "select category_id as id, 
-	              name 
-	         from category
-	        limit coalesce(cast(" $top " as integer), 100) 
-	       offset coalesce(cast(" $first "as integer), 0)"
+  query "select category_id as id, 
+	            name 
+           from category
+          limit coalesce(cast(" $top " as integer), 100) 
+         offset coalesce(cast(" $first "as integer), 0)"
 
 path "/category/" categoryId
-	datasource datasource1
+  datasource datasource1
 
-	query "select category_id as id, 
-	              name 
-             from category
-            where category_id = cast(" categoryId " as integer)"
+  query "select category_id as id, 
+                name 
+           from category
+          where category_id = cast(" categoryId " as integer)"
 ```
 
 **Define** its datasource
 {: .mt-5 }
 ```java
 datasource dvdrental
-	driver "org.postgresql.Driver"
-	url "jdbc:postgresql://localhost:5432/dvdrental"
-	user "postgres"
-	password "postgres"
+  driver "org.postgresql.Driver"
+  url "jdbc:postgresql://localhost:5432/dvdrental"
+  user "postgres"
+  password "postgres"
 ```
 
 **Run** it
