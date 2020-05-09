@@ -64,8 +64,14 @@ docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime
 
 **Be Happy!** 
 {: .mt-5}
-1. Your service is ready at `http://localhost:8080/dvdrental/v1/rest` ![Categories resource](img/categories.png)
+Your service is ready at `http://localhost:8080/dvdrental/v1/rest`
 
-2. Its [Open API](https://www.openapis.org/) specification is at `http://localhost:8080/dvdrental/v1/openapi` ![Open API specification](img/open-api.png)
+![Categories resource](img/categories.png)
 
-3. You can view it in a human-friendly way through the integrated [Swagger UI](https://swagger.io/tools/swagger-ui/) application at `http://localhost:8080/dvdrental/v1/swagger-ui` ![Swager UI](img/swagger-ui.png)
+Its [Open API](https://www.openapis.org/) specification is at `http://localhost:8080/dvdrental/v1/openapi`
+{: .mt-5}
+![Open API specification](img/open-api.png)
+
+You can view it in a human-friendly way through the integrated [Swagger UI](https://swagger.io/tools/swagger-ui/) application at `http://localhost:8080/dvdrental/v1/swagger-ui`
+{: .mt-5}
+![Swager UI](img/swagger-ui.png)
