@@ -29,7 +29,7 @@ path "/category/" categoryId
 implementation service dvdrental version v1
 
 path "/category"
-  datasource datasource1
+  datasource dvdrental
 
   query "select category_id as id, 
 	            name 
@@ -38,7 +38,7 @@ path "/category"
          offset coalesce(cast(" $first "as integer), 0)"
 
 path "/category/" categoryId
-  datasource datasource1
+  datasource dvdrental
 
   query "select category_id as id, 
                 name 
