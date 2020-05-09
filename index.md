@@ -62,21 +62,21 @@ datasource dvdrental
 docker run -it --rm -v $(pwd):/projects -p 8080:8080 marimplatform/runtime
 ```
 
-**Be Happy!** 
+**Be Happy!**
 {: .mt-5}
 1\. Your service is ready at `http://localhost:8080/dvdrental/v1/rest`
 
-![Categories resource](img/categories.png)
-{: .text-center}
+<img src="img/categories.png" class="img-fluid">
+{: .text-center }
 
 {: .mt-5 }
 2\. Its [Open API](https://www.openapis.org/) specification is at `http://localhost:8080/dvdrental/v1/openapi`
 
-![Open API specification](img/open-api.png)
+<img src="img/open-api.png" class="img-fluid">
 {: .text-center}
 
 {: .mt-5}
 3\. You can view it in a human-friendly way through the integrated [Swagger UI](https://swagger.io/tools/swagger-ui/) application at `http://localhost:8080/dvdrental/v1/swagger-ui`
 
-![Swager UI](img/swagger-ui.png)
+<img src="img/swagger-ui.png" class="img-fluid">
 {: .text-center}
