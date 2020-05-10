@@ -3,7 +3,6 @@
     layout: index
 ---
 **Declare** your service
-{: .mt-5 }
 ```java
 service dvdrental
 

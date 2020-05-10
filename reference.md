@@ -2,18 +2,17 @@
     title: Reference
     layout: container    
 ---
-# Declaration
-{: .mt-5 }
+### Declaration
 ![Declaration grammar](img/declaration.png)
 
-# API
+### API
 {: .mt-5 }
 ![API grammar](img/api.png)
 
-# Datasource
+### Datasource
 {: .mt-5 }
 ![Datasource grammar](img/datasource.png)
 
-# Implementation
+### Implementation
 {: .mt-5 }
 ![Implementation grammar](img/implementation.png)
