@@ -3,16 +3,20 @@
     layout: container    
 ---
 ### Declaration
-![Declaration grammar](img/declaration.png)
+<img title="Declaration grammar" src="img/declaration.png" class="img-fluid">
+{: .text-center}
 
 ### API
 {: .mt-5 }
-![API grammar](img/api.png)
+<img title="API grammar" src="img/api.png" class="img-fluid">
+{: .text-center}
 
 ### Datasource
 {: .mt-5 }
-![Datasource grammar](img/datasource.png)
+<img title="Datasource grammar" src="img/datasource.png" class="img-fluid">
+{: .text-center}
 
 ### Implementation
 {: .mt-5 }
-![Implementation grammar](img/implementation.png)
+<img title="Implementation grammar" src="img/implementation.png" class="img-fluid">
+{: .text-center}
